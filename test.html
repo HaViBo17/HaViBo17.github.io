@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Borkar's Banter</title>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body class="bg-indigo-100">
+	<div class="container max-w-2xl mx-auto" >
+        <div class="flex flex-col p-4 gap-5" id="posts">
+			<div id="warning" class="rounded bg-indigo-50 p-5 shadow-lg justify-center">
+				<div class="max-w-xs mx-auto">
+					<svg width="20%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto stroke-indigo-900">
+						<path d="M11 12C11 13.3807 9.88071 14.5 8.5 14.5C7.11929 14.5 6 13.3807 6 12C6 10.6193 7.11929 9.5 8.5 9.5C9.88071 9.5 11 10.6193 11 12Z" stroke-width="1.5"/>
+						<path d="M11 12H15.5M15.5 12H17C17.5523 12 18 12.4477 18 13V14M15.5 12V13.5" stroke-width="1.5" stroke-linecap="round"/>
+						<path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8"  stroke-width="1.5" stroke-linecap="round"/>
+					</svg>
+				</div>
+				<div class="mx-auto text-center">
+					<a href="https://harshborkar17.me"><button class="px-4 py-2 font-semibold text-sm bg-indigo-500 text-white rounded-full shadow-sm" id="continue">Continue</button></a>
+				</div>
+			</div>
+			
+		</div>
+    </div>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		var currKey = urlParams.get('key');
+		var currCount = parseInt(urlParams.get('count'),10);
+
+		verifyUser = ()=>{
+			window.location.href = "https://sites.google.com/view/borkarsbanter";
+		}
+
+		if(currKey == NaN || currCount == NaN){
+			verifyUser();
+		}else{
+			localStorage.setItem('key', currKey);
+			localStorage.setItem('count', currCount);
+			window.location.href = "https://harshborkar17.me";
+		}
+
+		
+
+		
+
+		
+		
+
+
+	</script>
+  
+</body>
+</html>

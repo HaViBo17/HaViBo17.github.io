@@ -57,18 +57,18 @@
         let currCount = localStorage.getItem('count');
 
 		verifyUser = ()=>{
-			window.location.href = "https://sites.google.com/view/borkarsbanter";
+			//window.location.href = "https://sites.google.com/view/borkarsbanter";
 		}
 
 		if(currKey == NaN || currCount == NaN){
 			verifyUser();
-		}
-
-		if(currCount != posts.length){
+		}else if(currCount != posts.length){
 			verifyUser();
+		}else {
+			$("#warning").hide()
 		}
 
-		$("#warning").hide()
+		
 
         hexStringToByteString = (hexString) => {
 			if (hexString.length % 2 !== 0) {
