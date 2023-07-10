@@ -23,7 +23,7 @@
 					</svg>
 				</div>
 				<div class="text-gray-600 text-center py-5 text-justify">
-					Have you been granted authorization to access this blog? Please verify your credentials. If you have indeed been granted permission, you will be able to read its contents without any difficulty.
+					Have you been granted authorization to🍎 access this blog? Please verify your credentials. If you have indeed been granted permission, you will be able to read its contents without any difficulty.
 				</div>
 				<div class="mx-auto text-center">
 					<a href="https://sites.google.com/view/borkarsbanter"><button class="px-4 py-2 font-semibold text-sm bg-indigo-500 text-white rounded-full shadow-sm">Verify</button></a>
@@ -125,9 +125,21 @@
 								
 				
 			}
+
+			textContent = decryptIt(encContent.content,times).split('\n');
+			
+			textContent.forEach(para => {
+				$newPara = $('<p>');
+				$newPara.append(para);
+				$content.append(para.toString('utf32'));
+				$content.append($('<br/>'))
+				console.log(para)
+			});
+			
+
             $timestamp.append(decryptIt(encContent.timestamp,times));
 			$heading.append(decryptIt(encContent.heading,times));
-			$content.append(decryptIt(encContent.content,times));
+			
 			$newPost.append($timestamp);
 			$newPost.append($heading);
 			$newPost.append($svg);
